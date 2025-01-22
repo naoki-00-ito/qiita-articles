@@ -1,0 +1,23 @@
+{
+  "name": "qiita-articles",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Qiita記事管理用パッケージです。",
+  "scripts": {
+    "login": "npx qiita login",
+    "preview": "npx qiita preview",
+    "new": "npx qiita new $1",
+    "publish": "npx qiita publish $1",
+    "publish:all": "npx qiita publish --all",
+    "pull": "npx qiita pull",
+    "pull:force": "npx qiita pull --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naoki-00-ito/qiita-articles.git"
+  },
+  "author": "Naoki Ito (https://github.com/naoki-00-ito/)",
+  "devDependencies": {
+    "@qiita/qiita-cli": "^1.6.1"
+  }
+}
