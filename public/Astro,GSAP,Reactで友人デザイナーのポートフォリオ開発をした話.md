@@ -1,13 +1,13 @@
 ---
-title: Astro+GSAP+Reactで友人ザイナーのポートフォリオ開発をした話
+title: 'Astro,GSAP,Reactで友人デザイナーのポートフォリオ開発をした話'
 tags:
-  - ポエム
+  - TypeScript
   - ポートフォリオ
   - React
   - astro
   - gsap
 private: true
-updated_at: '2025-01-23T22:45:54+09:00'
+updated_at: '2025-01-24T12:58:09+09:00'
 id: cdcf623aa79efdde1ffb
 organization_url_name: null
 slide: false
@@ -21,16 +21,9 @@ ignorePublish: false
 
 https://x.com/naoki_dev/status/1882015225513382350?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
 
-### 成果物
+### サイト
 
 https://taikisato.com/
-
-[GOOD PORTFOLIO](https://goodportfol.io/) という、ポートフォリオギャラリーサイトにも掲載いただきました:clap::clap:
-ありがとうございます:bow:
-
-https://x.com/goodportfol_io/status/1882205352260993464?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
-
-https://goodportfol.io/detail/vXC6dnRI
 
 ### リポジトリ
 
@@ -39,6 +32,19 @@ https://goodportfol.io/detail/vXC6dnRI
 https://github.com/INxST/st-portfolio
 
 本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
+
+### 各種ギャラリーサイトにも掲載いただきました！
+
+#### [GOOD PORTFOLIO](https://goodportfol.io/)
+
+https://x.com/goodportfol_io/status/1882205352260993464?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
+
+https://goodportfol.io/detail/vXC6dnRI
+
+
+#### [WebDesignClip](https://webdesignclip.com/)
+
+https://webdesignclip.com/taikisato/
 
 ## 依頼を受けた経緯
 
@@ -94,6 +100,7 @@ https://github.com/INxST/st-portfolio
   - 今回の要件的にSSGで問題ないかつ、パフォーマンス面の考慮も楽にできるため
 - [React](https://ja.react.dev/)
   - `.astro` だと実装が面倒な部分の補完用途で使用
+- [TypeScript](https://www.typescriptlang.org/)
 - [Prettier](https://prettier.io/)
   - フォーマッターとして採用
 - [Tailwind CSS](https://tailwindcss.com/)
