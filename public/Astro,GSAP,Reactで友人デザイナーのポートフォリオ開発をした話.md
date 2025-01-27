@@ -6,8 +6,8 @@ tags:
   - React
   - astro
   - gsap
-private: true
-updated_at: '2025-01-24T12:58:09+09:00'
+private: false
+updated_at: '2025-01-27T21:08:30+09:00'
 id: cdcf623aa79efdde1ffb
 organization_url_name: null
 slide: false
