@@ -7,7 +7,7 @@ tags:
   - astro
   - gsap
 private: false
-updated_at: '2025-01-27T21:08:30+09:00'
+updated_at: '2025-01-27T21:17:33+09:00'
 id: cdcf623aa79efdde1ffb
 organization_url_name: null
 slide: false
