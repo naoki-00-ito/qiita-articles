@@ -1,5 +1,5 @@
 ---
-title: 'Astro,GSAP,Reactで友人デザイナーのポートフォリオ開発をした話'
+title: 'Astro,GSAP,Reactで友人デザイナーのポートフォリオ開発をして、複数のギャラリーサイトに掲載された話'
 tags:
   - TypeScript
   - ポートフォリオ
@@ -31,8 +31,6 @@ https://taikisato.com/
 
 https://github.com/INxST/st-portfolio
 
-本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
-
 ### 各種ギャラリーサイトにも掲載いただきました！
 
 #### [GOOD PORTFOLIO](https://goodportfol.io/)
@@ -41,8 +39,9 @@ https://x.com/goodportfol_io/status/1882205352260993464?s=46&t=MBlWwQiytXDLqSYi1
 
 https://goodportfol.io/detail/vXC6dnRI
 
-
 #### [WebDesignClip](https://webdesignclip.com/)
+
+本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
 
 https://webdesignclip.com/taikisato/
 
