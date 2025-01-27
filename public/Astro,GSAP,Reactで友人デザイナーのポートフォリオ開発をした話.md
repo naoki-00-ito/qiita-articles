@@ -385,12 +385,11 @@ export default imageSequence;
 
 #### HTML
 
-HTMLは主にスタイリング用の属性を付与した、シンプルな a タグです。
-
 - `.ts-text-link` が script で処理するための class
 - `data-vertical` が文字方向を指定する属性
 
 です。
+他はリンク先とスタイリング用の属性を付与した、シンプルな a タグです。
 
 ```html
 <a
