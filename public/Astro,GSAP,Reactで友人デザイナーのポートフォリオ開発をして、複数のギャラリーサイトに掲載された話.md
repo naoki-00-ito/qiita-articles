@@ -41,9 +41,9 @@ https://goodportfol.io/detail/vXC6dnRI
 
 #### [WebDesignClip](https://webdesignclip.com/)
 
-本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
-
 https://webdesignclip.com/taikisato/
+
+本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
 
 ## 依頼を受けた経緯
 
