@@ -7,7 +7,7 @@ tags:
   - astro
   - gsap
 private: false
-updated_at: '2025-01-27T21:17:33+09:00'
+updated_at: '2025-01-28T23:54:47+09:00'
 id: cdcf623aa79efdde1ffb
 organization_url_name: null
 slide: false
@@ -41,9 +41,9 @@ https://goodportfol.io/detail/vXC6dnRI
 
 #### [WebDesignClip](https://webdesignclip.com/)
 
-本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
-
 https://webdesignclip.com/taikisato/
+
+本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
 
 ## 依頼を受けた経緯
 
