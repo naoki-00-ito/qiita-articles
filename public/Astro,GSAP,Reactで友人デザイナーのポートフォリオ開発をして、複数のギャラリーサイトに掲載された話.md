@@ -17,33 +17,31 @@ ignorePublish: false
 
 先日、友人のデザイナー[佐藤 大輝](https://x.com/0521taiki1)さんから任せていただいていた、ポートフォリオの開発が完了し、リリースしました:clap::clap:
 
-### ポスト
+https://taikisato.com/
 
 https://x.com/naoki_dev/status/1882015225513382350?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
 
-### サイト
+本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
 
-https://taikisato.com/
-
-### リポジトリ
-
-(スターいただけると嬉しいです...！)
+## リポジトリ
 
 https://github.com/INxST/st-portfolio
 
-### 各種ギャラリーサイトにも掲載いただきました！
+(スターいただけると嬉しいです...！)
 
-#### [GOOD PORTFOLIO](https://goodportfol.io/)
+## 各種ギャラリーサイトにも掲載いただきました:tada:
 
-https://x.com/goodportfol_io/status/1882205352260993464?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
+### [GOOD PORTFOLIO](https://goodportfol.io/)
 
 https://goodportfol.io/detail/vXC6dnRI
 
-#### [WebDesignClip](https://webdesignclip.com/)
+https://x.com/goodportfol_io/status/1882205352260993464?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
+
+### [WebDesignClip](https://webdesignclip.com/)
 
 https://webdesignclip.com/taikisato/
 
-本記事では、依頼を受けた経緯やモチベーション、技術スタックや一部実装の方法をご紹介します！
+https://x.com/webdesignclip/status/1882322489310912885?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
 
 ## 依頼を受けた経緯
 
