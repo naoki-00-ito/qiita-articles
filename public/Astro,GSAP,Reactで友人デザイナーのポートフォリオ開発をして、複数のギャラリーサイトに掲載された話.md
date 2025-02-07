@@ -43,6 +43,12 @@ https://webdesignclip.com/taikisato/
 
 https://x.com/webdesignclip/status/1882322489310912885?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
 
+### [S5-Style](https://www.s5-style.com/)
+
+https://www.s5-style.com/10064/
+
+https://x.com/s5style/status/1886228109437153316?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
+
 ## 依頼を受けた経緯
 
 [佐藤 大輝](https://x.com/0521taiki1)さんが私に依頼してくださったのは、
@@ -51,7 +57,7 @@ https://x.com/webdesignclip/status/1882322489310912885?s=46&t=MBlWwQiytXDLqSYi1x
 - アニメーションをふんだんに盛り込みたい
   - (が、諸々考慮しつつ作成をすると時間がかかってしまう)
 
-といった内容で、時間的な成約があるものの、その中でも可能な限り納得の行くものを作りたいという思いがあったようです。
+といった内容で、時間的な成約があるものの、その中でも可能な限り納得のいくものを作りたいという思いがあったようです。
 時間的な成約と聞くとネガティブに捉えがちですが、そんな状況下で相談してくださっているのは、私の能力を買ってくれているとも捉えられるので、ポジティブに捉えることもできます。
 
 ▼相談いただいた際のやり取り(一部抜粋)
