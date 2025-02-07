@@ -43,6 +43,12 @@ https://webdesignclip.com/taikisato/
 
 https://x.com/webdesignclip/status/1882322489310912885?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
 
+### [S5-Style](https://www.s5-style.com/)
+
+https://www.s5-style.com/10064/
+
+https://x.com/s5style/status/1886228109437153316?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
+
 ## 依頼を受けた経緯
 
 [佐藤 大輝](https://x.com/0521taiki1)さんが私に依頼してくださったのは、
