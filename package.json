@@ -18,6 +18,6 @@
   },
   "author": "Naoki Ito (https://github.com/naoki-00-ito/)",
   "devDependencies": {
-    "@qiita/qiita-cli": "^1.6.1"
+    "@qiita/qiita-cli": "^1.6.2"
   }
 }
