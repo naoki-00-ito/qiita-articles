@@ -78,18 +78,17 @@ inputs:
 
 ### protoファイル作成
 
-`proto/example/example.proto` を作成
+`/proto/example/v1/example.proto` を作成
 
 ```proto
 syntax = "proto3";
 
-package example;
+package example.v1;
 
 import "google/protobuf/timestamp.proto";
-import "google/api/annotations.proto";
 
 service ExampleService {
-  rpc Example(ExampleRequest) returns (ExampleResponse) {};
+  rpc GetExample(ExampleRequest) returns (ExampleResponse) {}
 }
 
 message Example {
@@ -150,7 +149,7 @@ openapi のファイルは以下のような内容で生成されます。
 {
   "swagger": "2.0",
   "info": {
-    "title": "example/example.proto",
+    "title": "example/v1/example.proto",
     "version": "version not set"
   },
   "tags": [
@@ -166,32 +165,6 @@ openapi のファイルは以下のような内容で生成されます。
   ],
   "paths": {},
   "definitions": {
-    "exampleExample": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "createdAt": {
-          "type": "string",
-          "format": "date-time"
-        }
-      }
-    },
-    "exampleExampleResponse": {
-      "type": "object",
-      "properties": {
-        "example": {
-          "$ref": "#/definitions/exampleExample"
-        }
-      }
-    },
     "protobufAny": {
       "type": "object",
       "properties": {
@@ -217,6 +190,32 @@ openapi のファイルは以下のような内容で生成されます。
             "type": "object",
             "$ref": "#/definitions/protobufAny"
           }
+        }
+      }
+    },
+    "v1Example": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "v1ExampleResponse": {
+      "type": "object",
+      "properties": {
+        "example": {
+          "$ref": "#/definitions/v1Example"
         }
       }
     }
@@ -258,17 +257,17 @@ npx buf mod update
 ```diff
 syntax = "proto3";
 
-package example;
+package example.v1;
 
 import "google/protobuf/timestamp.proto";
 +import "google/api/annotations.proto";
 
 service ExampleService {
-  rpc Example(ExampleRequest) returns (ExampleResponse) {
+  rpc GetExample(ExampleRequest) returns (ExampleResponse) {
 +   option (google.api.http) = {
-+     get: "/example/get/{id}"
++     get: "/v1/examples/{id}"
 +   };
-  };
+  }
 }
 
 message Example {
@@ -284,6 +283,118 @@ message ExampleRequest {
 
 message ExampleResponse {
   Example example = 1;
+}
+
+```
+
+`npx buf generate` で生成される openapi のファイルは以下のようになります。
+
+```json
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "example/v1/example.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "ExampleService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/examples/{id}": {
+      "get": {
+        "operationId": "ExampleService_GetExample",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1ExampleResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "ExampleService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1Example": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "v1ExampleResponse": {
+      "type": "object",
+      "properties": {
+        "example": {
+          "$ref": "#/definitions/v1Example"
+        }
+      }
+    }
+  }
 }
 
 ```
