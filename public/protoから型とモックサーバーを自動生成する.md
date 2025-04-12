@@ -78,9 +78,35 @@ inputs:
 
 ### protoファイル作成
 
-`proto` 配下に作成
+`proto/example/example.proto` を作成
 
 ```proto
+syntax = "proto3";
+
+package example;
+
+import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
+
+service ExampleService {
+  rpc Example(ExampleRequest) returns (ExampleResponse) {};
+}
+
+message Example {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  google.protobuf.Timestamp created_at = 4;
+}
+
+message ExampleRequest {
+  string id = 1;
+}
+
+message ExampleResponse {
+  Example example = 1;
+}
+
 ```
 
 ## ts-protoc-gen をインストール
@@ -113,5 +139,151 @@ plugins:
 +   out: gen
 inputs:
   - directory: proto
+
+```
+
+`npx buf generate` を実行すると、`gen` ディレクトリに go と openapi のファイルが生成されます。
+
+openapi のファイルは以下のような内容で生成されます。
+
+```json
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "example/example.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "ExampleService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {},
+  "definitions": {
+    "exampleExample": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "exampleExampleResponse": {
+      "type": "object",
+      "properties": {
+        "example": {
+          "$ref": "#/definitions/exampleExample"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}
+
+```
+
+## gRPC Gateway 設定
+
+### googleapis を追加
+
+`buf.yaml` に以下を追加
+
+```diff
+# For details on buf.yaml configuration, visit https://buf.build/docs/configuration/v2/buf-yaml
+version: v2
+modules:
+  - path: proto
+lint:
+  use:
+    - STANDARD
+breaking:
+  use:
+    - FILE
++deps:
++ - buf.build/googleapis/googleapis
+
+```
+
+以下のコマンドを実行して、googleapis を追加します。
+
+```bash
+npx buf mod update
+````
+
+### proto に REST API の設定を追加
+
+```diff
+syntax = "proto3";
+
+package example;
+
+import "google/protobuf/timestamp.proto";
++import "google/api/annotations.proto";
+
+service ExampleService {
+  rpc Example(ExampleRequest) returns (ExampleResponse) {
++   option (google.api.http) = {
++     get: "/example/get/{id}"
++   };
+  };
+}
+
+message Example {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  google.protobuf.Timestamp created_at = 4;
+}
+
+message ExampleRequest {
+  string id = 1;
+}
+
+message ExampleResponse {
+  Example example = 1;
+}
 
 ```
