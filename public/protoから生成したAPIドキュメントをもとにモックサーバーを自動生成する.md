@@ -1,14 +1,14 @@
 ---
 title: protoから生成したAPIドキュメントをもとにモックサーバーを自動生成する
 tags:
-  - 'OpenAPI'
-  - 'protobuf'
-  - 'msw'
-  - 'モック'
-  - '自動生成'
+  - protobuf
+  - モック
+  - 自動生成
+  - OpenAPI
+  - msw
 private: false
-updated_at: ''
-id: null
+updated_at: '2025-05-18T01:59:43+09:00'
+id: 1db7e5ad34f42e3000eb
 organization_url_name: null
 slide: false
 ignorePublish: false
