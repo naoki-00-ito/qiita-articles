@@ -449,7 +449,7 @@ pnpm add -D msw-auto-mock faker-js
         └── node.ts
 ```
 
-`src/mocks/handlers.ts` の中身をみてみると、以下のように、Swagger の定義をもとにしてモックを生成するためのコードが記載されています。
+`src/mocks/handlers.ts` の中身をみてみると、以下のように、OpenAPIの仕様書をもとにしてモックを生成するためのコードが記載されています。
 
 ```ts
 /**
