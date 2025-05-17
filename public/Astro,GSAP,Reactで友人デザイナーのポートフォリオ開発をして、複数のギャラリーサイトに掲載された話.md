@@ -29,6 +29,10 @@ https://github.com/INxST/st-portfolio
 
 (スターいただけると嬉しいです...！)
 
+## CSS Design Awards の Website Of The Day を受賞しました:tada:
+
+https://x.com/naoki_dev/status/1919033408614793712?s=46&t=MBlWwQiytXDLqSYi1xfVWQ
+
 ## 各種ギャラリーサイトにも掲載いただきました:tada:
 
 ### [GOOD PORTFOLIO](https://goodportfol.io/)
