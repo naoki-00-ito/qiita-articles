@@ -119,12 +119,6 @@ message ExampleResponse {
 
 ```
 
-## ts-protoc-gen をインストール
-
-```bash
-pnpm add -D ts-protoc-gen
-```
-
 ## OpenAPIの仕様書 生成設定
 
 https://buf.build/grpc-ecosystem/openapiv2?version=v2.26.3
